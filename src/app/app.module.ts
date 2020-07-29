@@ -16,6 +16,8 @@ import { RecuperacionComponent } from './recuperacion/recuperacion.component';
 import { NuevaContraseniaComponent } from './nueva-contrasenia/nueva-contrasenia.component';
 import { CronogramaActividadesComponent } from './cronograma-actividades/cronograma-actividades.component';
 import { CalibracionComponent } from './calibracion/calibracion.component';
+import { MenuComponent } from './menu/menu.component';
+import { appRoutingProviders, routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -32,13 +34,15 @@ import { CalibracionComponent } from './calibracion/calibracion.component';
     NuevaContraseniaComponent,
     CalibracionComponent,
     CronogramaActividadesComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
