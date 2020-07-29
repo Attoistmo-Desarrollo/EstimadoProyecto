@@ -1,33 +1,3 @@
-<<<<<<< HEAD
 <app-menu *ngIf="router.url != '/' && router.url != '/login' && router.url != '/recuperacion'"></app-menu>
 
 <router-outlet *ngIf="router.url == '/' || router.url == '/login' || router.url == '/recuperacion'"></router-outlet>
-=======
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <div class="barMenu">
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a style="color: #ffffff;" class="nav-link" href="#">Mi Cuenta</a>
-      </li>
-      <li class="nav-item">
-        <a style="color: #ffffff;" class="nav-link" href="#">Terminar sesion</a>
-      </li>
-    </ul>
-  </div>
-  <div class="row">
-    <div class="col-2 col-md-2" style="text-align: left;" >
-      <div class="list-group my-4">
-        <a style="background: #252830; color: #ffffff;" routerLink="detalles" class="list-group-item list-group-item-action">Detalles de proyecto</a>
-        <a style="background: #252830; color: #ffffff;" routerLink="detalles-implicados" class="list-group-item list-group-item-action">Detalles de implicados</a>
-        <a style="background: #252830; color: #ffffff;" routerLink="calibracion-usuario" class="list-group-item list-group-item-action">Calibracion por usuario</a>
-        <a style="background: #252830; color: #ffffff;" routerLink="insumo" class="list-group-item list-group-item-action">Estimacion</a>
-        <a style="background: #252830; color: #ffffff;" routerLink="cronograma"  class="list-group-item list-group-item-action">Cronograma</a>
-        <a style="background: #252830; color: #ffffff;" routerLink="calibracion" class="list-group-item list-group-item-action">Calibracion</a>
-      </div>
-    </div>
-    <div class="col-10 col-md-10">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-
->>>>>>> 9625de3666b238a028bcde2ccfc1cc8b3a5ab1d2
