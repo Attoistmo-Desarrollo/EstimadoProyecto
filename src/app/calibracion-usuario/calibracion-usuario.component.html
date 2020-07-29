@@ -1,0 +1,153 @@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calibracion por Usuario</title>
+
+<style>
+  #button {
+   padding: 0;
+  }
+
+  #button li {
+   display: inline;
+  }
+
+  table{
+    /* border: solid black 2px; */
+    border: none;
+  }
+  th{
+    background: grey;
+  }
+  th,td{
+    border: solid black 2px;
+  }
+
+  div#menu{
+    float: left;
+  }
+
+  div#tabla{
+    float: center;
+  }
+
+  .border{
+      border: solid black 2px;
+  }
+</style>
+  <div>
+    <h1><p style="text-align: center;"> Calibración por Usuario </p></h1>
+  <div id="tabla">
+    <table align="center">
+        <div class="col-6">
+            <aside class="my-4 text-center">
+                <div class="row">
+                        <form action="calibracion-usuario.component.ts" method="GET">
+                            <p>Nombre de usuario: &nbsp;&nbsp;<input class="my-2" name="NombreUsuario" type="text" value="Ingrese el Nombre de usuario" size="40px">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="button">Busqueda</button></p>
+                            <br>
+                            <div class="border">
+                            <p align="center"><b>Evaluar Usuario</b></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                ID: &nbsp;&nbsp; <b>####</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                                Nombre Tarea: &nbsp;&nbsp; <select name="select">
+                                    <option value="value1" selected>Tienda</option> 
+                                    <option value="value2">Hospital</option>
+                                    <option value="value3">Ferreteria</option>
+                                </select>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                                Proyecto: &nbsp;&nbsp; <input class="my-2" name="NombreProyecto" type="text" value="Ingrese el Nombre de proyecto" size="25px">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                                Calificación: &nbsp;&nbsp; <b>####</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                                Forma de Trabajo: &nbsp;&nbsp; <select name="select">
+                                    <option value="value1" selected>Buena</option> 
+                                    <option value="value2">Regular</option>
+                                    <option value="value3">Mala</option>
+                                </select>
+                            </p>
+                            </div>
+                        </form>
+                </div>
+            </aside>
+        </div>
+        <br><br>
+    <table>
+      <thead>
+        <tr>
+          <th align="center">N°</th>
+          <th align="center">Nombre de tarea</th>
+          <th align="center">Nombre de proyecto</th>
+          <th align="center">Cantidad</th>
+          <th align="center">Estado</th>
+          <th align="center">Revisión</th>
+          <th align="center">Comentarios</th>
+          <th align="center">Archivo adjunto</th>
+          <th align="center">URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td align="left">Desarrollo de Back</td>
+          <td align="left">Ferreteria</td>
+          <td align="center">3</td>
+          <td align="left">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No se encontro ningun inconveniente</td>
+          <td align="left">Ferreteria.rar</td>
+          <td align="left">https://www.drive-datos.com</td>
+        </tr>
+
+        <tr>
+          <td align="center">2</td>
+          <td align="left">Desarrollo del servicios REST</td>
+          <td align="left">Papeleria</td>
+          <td align="center">5</td>
+          <td align="left">Inconcluso</td>
+          <td align="center">[-]</td>
+          <td align="left">No se terminaron los REST</td>
+          <td align="left">Papeleria.rar</td>
+          <td align="left">https://www.drive-datos.com</td>
+        </tr>
+
+        <tr>
+            <td align="center">3</td>
+            <td align="left">Creación del Front</td>
+            <td align="left">Hospital</td>
+            <td align="center">7</td>
+            <td align="left">Completo</td>
+            <td align="center">[✓]</td>
+            <td align="left">No se encontro ningun inconveniente</td>
+            <td align="left">Hospital.rar</td>
+            <td align="left">https://www.drive-datos.com</td>
+        </tr>
+
+        <tr>
+          <td align="center">4</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="left">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+      </tbody>
+    </table>
+    <br><br>
+    
+    <p>Comentario hacia el usuario: &nbsp;&nbsp;<input class="my-2" name="ComentarioUsuario" type="text" value="Comentario" size="100px"></p>
+
+    <br>
+    <p align="center"><button (click)="enviar()" type="button" class="button">Guardar Revisión</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="button">Cancelar Revisión</button></p>
+
+    </table>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<div class="container">
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Mi Cuenta</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Terminar sesion</a>
+    </li>
+  </ul>
+  <div class="row">
+    <div class="col-2 col-md-2" style="text-align: left;" >
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">Detalles de proyecto</a>
+        <a href="#" class="list-group-item list-group-item-action">Detalles de implicados</a>
+        <a href="#" class="list-group-item list-group-item-action">Calibracion por usuario</a>
+        <a routerLink="insumo" class="list-group-item list-group-item-action">Estimacion</a>
+        <a routerLink="cronograma"  class="list-group-item list-group-item-action">Cronograma</a>
+        <a routerLink="calibracion" class="list-group-item list-group-item-action">Calibracion</a>
+      </div>
+    </div>
+    <div class="col-10 col-md-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

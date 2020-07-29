@@ -1,0 +1,151 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <br>
+      <br>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <h4 class="col-md-3">Insumo</h4>
+                    <a class="col-md-3" data-toggle="modal" data-target="#insumo">
+                        <i class="material-icons verde" title=" agregar insumo">add_circle</i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre Insumo</th>
+                    <th scope="col">Tipo formato</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Operación</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td class="col-md-2">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="" >
+                                    <i class="material-icons negro" title="enviar">visibility</i>
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="" >
+                                    <i class="material-icons rojo" title="enviar">delete</i>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <a href="" >
+                                    <i class="material-icons anarillo" title="enviar">create</i>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <h4 class="col-md-3">Trabajador</h4>
+                <a class="col-md-3" data-toggle="modal" data-target="#trabajador" >
+                    <i class="material-icons verde" title="agregar trabajador">add_circle</i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Area</th>
+                <th scope="col">Operación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td class="col-md-2">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="" >
+                                <i class="material-icons negro" title="enviar">visibility</i>
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="" >
+                                <i class="material-icons rojo" title="enviar">delete</i>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <a href="" >
+                                <i class="material-icons anarillo" title="enviar">create</i>
+                            </a>
+                        </div>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10"></div>
+    <div>
+        <a class="col-md-3" href="" >
+            <i class="material-icons md-48" title="enviar">send</i>
+        </a>
+    </div>
+</div>
+<!--Inicio Modal insumo-->
+<div class="modal fade" id="insumo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">agregar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-addinsumo></app-addinsumo>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Fin Modal insumo-->
+<!--Inicio Modal Trabajador-->
+<div class="modal fade" id="trabajador" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">agregar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-addtrabajador
+          [guardardato]="insumo"
+          (trabajadorchange)="refrescar($event)">
+          </app-addtrabajador>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Fin Modal Trabajador-->
