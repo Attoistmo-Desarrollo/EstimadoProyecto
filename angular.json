@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "Estimador": {
@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Estimador"
+    }
+  },
+  "defaultProject": "Estimador",
+  "cli": {
+    "analytics": "d0e3979b-4cc1-4767-a297-23d50e9ce21a"
+  }
 }

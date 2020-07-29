@@ -34,46 +34,46 @@
       border: solid black 2px;
   }
 </style>
-  <div>
-    <h1><p style="text-align: center;"> Calibración por Usuario </p></h1>
+
+<div>
+  <h1><p style="text-align: center;"> Calibración por Usuario </p></h1>
+
   <div id="tabla">
-    <table align="center">
-        <div class="col-6">
-            <aside class="my-4 text-center">
-                <div class="row">
-                        <form action="calibracion-usuario.component.ts" method="GET">
-                            <p>Nombre de usuario: &nbsp;&nbsp;<input class="my-2" name="NombreUsuario" type="text" value="Ingrese el Nombre de usuario" size="40px">
-                                &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="button">Busqueda</button></p>
-                            <br>
-                            <div class="border">
-                            <p align="center"><b>Evaluar Usuario</b></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
-                                ID: &nbsp;&nbsp; <b>####</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <table style="text-align: center;">
+        <aside class="my-4 text-center">
+          <div class="row">
+            <form action="calibracion-usuario.component.ts" method="GET">
+              <p>Nombre de usuario: &nbsp;&nbsp;<input class="my-2" name="NombreUsuario" type="text" value="Ingrese el Nombre de usuario" size="40px">
+                &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="button">Busqueda</button></p>
+                <br>
+                <div class="border">
+                  <p align="center"><b>Evaluar Usuario</b></p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                    ID: &nbsp;&nbsp; <b>####</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    Nombre Tarea: &nbsp;&nbsp; <select name="select">
+                      <option value="value1" selected>Tienda</option> 
+                      <option value="value2">Hospital</option>
+                      <option value="value3">Ferreteria</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             
-                                Nombre Tarea: &nbsp;&nbsp; <select name="select">
-                                    <option value="value1" selected>Tienda</option> 
-                                    <option value="value2">Hospital</option>
-                                    <option value="value3">Ferreteria</option>
-                                </select>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            
-                                Proyecto: &nbsp;&nbsp; <input class="my-2" name="NombreProyecto" type="text" value="Ingrese el Nombre de proyecto" size="25px">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            
-                                Calificación: &nbsp;&nbsp; <b>####</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            
-                                Forma de Trabajo: &nbsp;&nbsp; <select name="select">
-                                    <option value="value1" selected>Buena</option> 
-                                    <option value="value2">Regular</option>
-                                    <option value="value3">Mala</option>
-                                </select>
-                            </p>
-                            </div>
-                        </form>
+                    Proyecto: &nbsp;&nbsp; <input class="my-2" name="NombreProyecto" type="text" value="Ingrese el Nombre de proyecto" size="25px">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                
+                  <p>Calificación: &nbsp;&nbsp; <b>####</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                    Forma de Trabajo: &nbsp;&nbsp; <select name="select">
+                        <option value="value1" selected>Buena</option> 
+                        <option value="value2">Regular</option>
+                        <option value="value3">Mala</option>
+                    </select>
+                  </p>
                 </div>
-            </aside>
-        </div>
-        <br><br>
+            </form>
+          </div>
+        </aside>
+    <br><br>
     <table>
       <thead>
         <tr>
