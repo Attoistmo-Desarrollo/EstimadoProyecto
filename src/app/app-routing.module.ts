@@ -15,7 +15,7 @@ import { CronogramaActividadesComponent } from './cronograma-actividades/cronogr
 
 
 const routes: Routes = [
-  //{path: 'insumo', component: InsumoestimacionComponent},
+  {path: 'insumo', component: InsumoestimacionComponent},
   {path: 'addtrabajador', component: AddtrabajadorComponent},
   {path: 'addinsumo', component: AddinsumoComponent},
   {path: 'cronograma', component : CronogramaComponent},
