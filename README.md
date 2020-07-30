@@ -1,5 +1,12 @@
 # EstimadoProyecto
 proyecto estimado
+---------------------------------------------------------------------
+instalar por comando 
+ npm install
+ npm install sweetalert --save
+modificar node_moduls/sweetAlert/typings/sweetalert.d.ts
+ documentar la linea 4
+---------------------------------------------------------------------
 comandos git
 git add .       opcional = git add <filename>
 git commit -m "Commit message"
