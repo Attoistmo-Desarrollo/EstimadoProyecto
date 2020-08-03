@@ -19,6 +19,8 @@ import { CalibracionComponent } from './calibracion/calibracion.component';
 import { MenuComponent } from './menu/menu.component';
 import { appRoutingProviders, routing } from './app.routing';
 
+import { DataTablesModule } from 'angular-datatables';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,8 @@ import { appRoutingProviders, routing } from './app.routing';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    routing
+    routing,
+    DataTablesModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
