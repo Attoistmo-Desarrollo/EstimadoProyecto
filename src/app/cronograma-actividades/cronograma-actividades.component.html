@@ -8,7 +8,7 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-9 text-center">
-        <table datatable class="table table-striped table-bordered my-4">
+        <table datatable="ng" *ngIf="cronAct" [dtOptions]="cronAct" class="row-border hover table-bordered">
           <thead>
             <tr>
               <th>Id</th>
@@ -21,15 +21,15 @@
               <th>Evidencia</th>
             </tr>
           </thead>
-          <tbody class="datTable">
-            <tr *ngFor="let cA of cronogramaActividades"> <!-- *ngFor="let cronoActivity of cronogramaActividades"| filter:filterPost"-->
+          <tbody style="font-size: 12px;" class="datTable">
+            <tr *ngFor="let cA of cronAct"> <!-- *ngFor="let cronoActivity of cronogramaActividades"| filter:filterPost"-->
               <td>{{cA.id}}</td>
               <td>{{cA.actividad }}</td>
-              <td>{{cA.empleado}}</td>
-              <td>{{cA.cantidad }}</td>
-              <td>{{cA.tiempo }}</td>
+              <td>{{cA.asignado }}</td>
+              <td>{{cA.cantidad}}</td>
+              <td>{{cA.timefase }}</td>
               <td>{{cA.estado }}</td>
-              <td>{{cA.fecha }}</td>
+              <td>{{cA.fechaentrega }}</td>
               <td><a href="https://drive.google.com/file/d/1EvX2KKcJQWelOiw4j5cwEx1Ygiy9LH57/view?usp=sharing" target="_blank">Oracle Certified.pdf</a> </td>
             </tr>
           </tbody>
