@@ -21,6 +21,13 @@ import { appRoutingProviders, routing } from './app.routing';
 
 import { DataTablesModule } from 'angular-datatables';
 
+//*************************************************************************** */
+import { CalibracionUsuarioService } from "../app/calibracion-usuario/share/calibracion-usuario.service";
+import { DetallesProyectoService } from "../app/detalles-proyecto/detalles-proyecto/share/detalles-proyecto.service";
+import { DetallesImplicadosService } from "../app/detalles-implicados/share/detalles-implicados.service";
+import { HttpClientModule } from "@angular/common/http";
+//*************************************************************************** */
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +43,14 @@ import { DataTablesModule } from 'angular-datatables';
     NuevaContraseniaComponent,
     CalibracionComponent,
     CronogramaActividadesComponent,
-    MenuComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     routing,
+    HttpClientModule,
     DataTablesModule
   ],
   providers: [appRoutingProviders],

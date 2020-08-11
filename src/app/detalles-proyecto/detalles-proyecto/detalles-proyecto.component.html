@@ -1,31 +1,3 @@
-<style>
-  #button {
-   padding: 0;
-  }
-
-  #button li {
-   display: inline;
-  }
-
-  table{
-    /* border: solid black 2px; */
-    border: none;
-  }
-  th{
-    background: grey;
-  }
-  th,td{
-    border: solid black 2px;
-  }
-
-  div#menu{
-    float: left;
-  }
-
-  div#tabla{
-    float: center;
-  }
-</style>
   <div>
     <h1><p style="text-align: center;"> Detalles de Proyecto </p></h1>
   <div id="tabla">
@@ -38,7 +10,8 @@
     </select></p>
     <br>
 
-    <table datatable class="table table-striped table-bordered">
+    <!-- <table datatable class="table table-striped table-bordered"> -->
+      <table datatable="ng" *ngIf="detalle" [dtOptions]="detalle" class="row-border hover table-bordered">
       <thead>
         <tr>
           <th align="center">ID de proyecto</th>
@@ -47,7 +20,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor = "let d of detalle">
+          <td>{{d.idproyecto}}</td>
+          <td>{{d.nombreproyecto}}</td>
+          <td>{{d.requerimientos}}</td>
+        </tr>
+        <!-- <tr>
           <td align="center">7384</td>
           <td align="left">Punto de venta</td>
           <td align="left"><p>1.- Se necesita un sistema para registrar las ventas del día</p>
@@ -55,7 +33,7 @@
                             <p>3.- Se necesita regristrar los productos que se tienen en existencia</p>
                             <p>4.- El sistema debe de ser de facil entendimiento</p>
                             <p>5.- Se requiere un manual para explicar el sistema</p></td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
     </table>

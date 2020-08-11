@@ -46,7 +46,8 @@
 </div>
 
     <div style="width: 1120px; height: 300px; overflow: auto;">
-    <table datatable class="table table-striped table-bordered">
+    <!-- <table datatable class="table table-striped table-bordered"> -->
+      <table datatable="ng" *ngIf="calibracion" [dtOptions]="calibracion" class="row-border hover table-bordered">
       <thead>
         <tr>
           <th align="center" bgcolor="C0C0C0">N°</th>
@@ -54,14 +55,61 @@
           <th align="center" bgcolor="C0C0C0">Nombre de proyecto</th>
           <th align="center" bgcolor="C0C0C0">Cantidad</th>
           <th align="center" bgcolor="C0C0C0">Estado</th>
-          <th align="center" bgcolor="C0C0C0">Revisión</th>
+          <!-- <th align="center" bgcolor="C0C0C0">Revisión</th> -->
           <th align="center" bgcolor="C0C0C0">Comentarios</th>
           <th align="center" bgcolor="C0C0C0">Archivo adjunto</th>
           <th align="center" bgcolor="C0C0C0">URL</th>
         </tr>
       </thead>
       <tbody>
+        <!-- <tr *ngIf = "calibracion">
+          {{calibracion}}
+        </tr> -->
+        <tr *ngFor = "let c of calibracion">
+          <td>{{c.n}}</td>
+          <td>{{c.nombretarea}}</td>
+          <td>{{c.nombreproyecto}}</td>
+          <td>{{c.cantidad}}</td>
+          <td>{{c.estado}}</td>
+          <td>{{c.comentarios}}</td>
+          <td>{{c.archivo}}</td>
+          <td>{{c.url}}</td>
+        </tr>
+        <!-- <tr>
+          <td align="center">1</td>
+          <td align="left">Desarrollo de Back</td>
+          <td align="left">Ferreteria</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No se encontro ningun inconveniente</td>
+          <td align="left">Ferreteria.rar</td>
+          <td align="left">https://www.drive-datos.com</td>
+        </tr>
+
         <tr>
+          <td align="center">2</td>
+          <td align="left">Desarrollo del servicios REST</td>
+          <td align="left">Papeleria</td>
+          <td align="center">5</td>
+          <td align="center">Inconcluso</td>
+          <td align="center">[-]</td>
+          <td align="left">No se terminaron los REST</td>
+          <td align="left">Papeleria.rar</td>
+          <td align="left">https://www.drive-datos.com</td>
+        </tr>
+
+        <tr>
+            <td align="center">3</td>
+            <td align="left">Creación del Front</td>
+            <td align="left">Hospital</td>
+            <td align="center">7</td>
+            <td align="center">Completo</td>
+            <td align="center">[✓]</td>
+            <td align="left">No se encontro ningun inconveniente</td>
+            <td align="left">Hospital.rar</td>
+            <td align="left">https://www.drive-datos.com</td>
+        </tr><tr>
           <td align="center">1</td>
           <td align="left">Desarrollo de Back</td>
           <td align="left">Ferreteria</td>
@@ -241,8 +289,153 @@
           <td align="left">No hay URL</td>
         </tr>
 
+        <tr>
+          <td align="center">4</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">5</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">6</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">7</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">8</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">9</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">10</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">11</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">12</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">13</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">14</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr>
+
+        <tr>
+          <td align="center">15</td>
+          <td align="left">Pruebas del boton guardar</td>
+          <td align="left">Constructora</td>
+          <td align="center">3</td>
+          <td align="center">Completo</td>
+          <td align="center">[✓]</td>
+          <td align="left">No guarda en la BD</td>
+          <td align="left">No adjunto</td>
+          <td align="left">No hay URL</td>
+        </tr> -->
+
       </tbody>
-    </table>
+      </table>
+    <!-- </table> -->
     </div>
     <br><br>
     
@@ -252,3 +445,5 @@
     <p align="center"><button (click)="enviar()" type="button" class="button">Guardar Revisión</button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button type="button" class="button">Cancelar Revisión</button></p>
+
+    <!-- <h1>{{calibracion | json}}</h1> -->

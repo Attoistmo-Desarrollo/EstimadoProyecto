@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DetallesProyectoService } from './share/detalles-proyecto.service';
+import { data } from 'jquery';
 
 @Component({
   selector: 'app-detalles-proyecto',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalles-proyecto.component.css']
 })
 export class DetallesProyectoComponent implements OnInit {
+  detalle: any;
 
-  constructor() { }
+  constructor(public detallesProyectoService: DetallesProyectoService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.detallesProyectoService.getDetalle().subscribe(data => {
+      this.detalle = data;
+    });
   }
 
 }
