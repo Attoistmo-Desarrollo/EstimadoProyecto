@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+// import { MatPaginator } from '@angular/material/paginator';
 
 
 export interface PeriodicElement {
