@@ -25,10 +25,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
+                  <tr *ngFor="let recorido of insumo">
+                    <th>{{recorido.nombre}}</th>
+                    <td>{{recorido.formato}}</td>
+                    <td>{{recorido.descripcion}}</td>
                     <td class="col-md-2">
                         <div class="row">
                             <div class="col-sm-4">
@@ -63,8 +63,8 @@
             </div>
         </div>
         <div class="col-md-6"></div>
-    </div>
-        <table datatable class="table table-bordered">
+    </div><!--datatable class="table table-bordered"-->
+        <table class="table table-hover" >
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -74,10 +74,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+              <tr *ngFor="let recorido of trabajador">
+                <th scope="row">{{recorido.id}}</th>
+                <td>{{recorido.nombre}}</td>
+                <td>{{recorido.area}}</td>
                 <td class="col-md-2">
                     <div class="row">
                         <div class="col-sm-4">
@@ -104,10 +104,19 @@
 <div class="row">
     <div class="col-md-10"></div>
     <div>
-        <a class="col-md-3" href="" >
-            <i class="material-icons md-48" title="enviar">send</i>
+        <a class="col-md-3" >
+            <i (click)="agregar()"  class="material-icons md-48" title="enviar">send</i>
         </a>
     </div>
+</div>
+<!--<div>
+  <button (click)="agregarInsumo()" >insumo</button>
+  <button (click)="agregarTrabajador()" >trabajador</button>
+</div>-->
+<div>
+  <span>
+    {{idestimado | json}}
+  </span>
 </div>
 <!--Inicio Modal insumo-->
 <div class="modal fade" id="insumo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -120,7 +129,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <app-addinsumo></app-addinsumo>
+          <app-addinsumo
+          [guardarinsumo]="insumo"
+          (insumoschange)="refrescarinsumo($event)">
+        </app-addinsumo>
         </div>
       </div>
     </div>
@@ -138,7 +150,7 @@
         </div>
         <div class="modal-body">
           <app-addtrabajador
-          [guardardato]="insumo"
+          [guardardato]="trabajador"
           (trabajadorchange)="refrescar($event)">
           </app-addtrabajador>
         </div>

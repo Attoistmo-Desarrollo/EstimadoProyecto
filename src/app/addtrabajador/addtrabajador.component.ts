@@ -23,11 +23,12 @@ export class AddtrabajadorComponent implements OnInit {
   ngOnInit(): void {
   }
   agregar() {
-    this.trabajadorchange.emit({id: this.id, nombre: this.nombre, area: this.area });
+    this.trabajadorchange.emit({id: this.id, id_estimador: 1, nombre: this.nombre, area: this.area });
     alert('se agrego al trabajador');
+    this.limpiar();
   }
   limpiar() {
-    this.id = 0;
+    this.id = null;
     this.nombre = '';
   }
 }
